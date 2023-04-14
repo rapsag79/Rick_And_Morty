@@ -1,15 +1,18 @@
 body {
-  margin: 0;
+  margin: 2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: cover;
+  background-size: auto;
+  background-image: url(https://storage.googleapis.com/pai-images/fd103e81f5154456af0dd191b8e412c9.jpeg);
 
-  background-image: url(https://storage.googleapis.com/pai-images/4f75f743ff174f82acf637b180f4aa4a.jpeg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-color: rgba(0, 0, 0, 0.859); */
+  /* background-repeat: repeat; */
+  /* background-attachment: inherit; */
 }
 
 /* code {

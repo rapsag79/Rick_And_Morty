@@ -1,0 +1,172 @@
+.card {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  margin-top: 30px;
+  background-color: rgb(198, 214, 24);
+  border: 2px solid limegreen;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  /* 
+  position: relative;
+  top: 30px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: rgb(198, 214, 24);
+  border: 2px solid limegreen;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out; */
+}
+
+.card:hover {
+  background-color: #ebd912;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border: 2px solid #00ff96;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.card .hidden {
+  display: none;
+}
+
+/* Al hacer hover sobre .card, removemos la clase hidden de los h2 */
+.card:hover h2.hidden {
+  display: block;
+}
+
+.card:hover .closeButton {
+  display: block;
+}
+.closeButton {
+  display: none;
+}
+
+/* .card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.cardInner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  z-index: 2;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card:hover .closeButton {
+  display: block;
+}
+
+.name,
+.status,
+.species,
+.gender,
+.origin {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.cardBack h2 {
+  margin-top: 50%;
+}
+
+.nameBack,
+.statusBack,
+.speciesBack,
+.genderBack,
+.originBack {
+  margin-top: 15px;
+  font-size: 16px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.closeButtonBack {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cardBack .closeButtonBack {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: 450px;
+  }
+} */

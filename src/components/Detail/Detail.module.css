@@ -1,0 +1,84 @@
+/* .card {
+  position: relative;
+  top: 30px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: transparent;
+  border: 2px solid limegreen;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  background-color: #ebd912;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border: 2px solid #00ff96;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+} */
+
+.card {
+  position: relative;
+  top: 30px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: rgb(198, 214, 24);
+  border: 2px solid limegreen;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  background-color: #ebd912;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border: 2px solid #00ff96;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Agregamos la clase hidden */
+.card .hidden {
+  display: none;
+}
+
+/* Al hacer hover sobre .card, removemos la clase hidden de los h2 */
+.card:hover h2.hidden {
+  display: block;
+}
+
+.card:hover .closeButton {
+  display: block;
+}
+.closeButton {
+  display: none;
+}

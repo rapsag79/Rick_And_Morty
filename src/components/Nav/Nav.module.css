@@ -1,0 +1,27 @@
+.nav-container {
+  background-color: #8ae6b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 9px;
+  left: 0;
+  width: 100%;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: yellowgreen;
+}
+
+.active {
+  color: lime;
+}

@@ -1,9 +1,9 @@
 import Card from "../Card/Card.jsx";
-// import "./App.css";
+import styles from "./Cards.module.css";
 
 export default function Cards({ characters, onClose }) {
   return (
-    <div className="card-grid">
+    <div className={styles["card-grid"]}>
       {characters.map(
         ({ id, name, status, species, gender, origin, image }) => {
           return (

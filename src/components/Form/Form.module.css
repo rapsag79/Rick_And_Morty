@@ -1,0 +1,74 @@
+.rick-morty-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(3, 136, 3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.form-container {
+  display: inherit;
+  justify-content: center;
+  margin-top: 15px;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-color: #202027;
+  background: transparent;
+
+  /* background-image: url(https://storage.googleapis.com/pai-images/4f75f743ff174f82acf637b180f4aa4a.jpeg); */
+  background-size: auto;
+}
+
+.image {
+  width: 70%;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 20px 10px 15px rgb(50, 205, 107);
+}
+
+@font-face {
+  font-family: "Nosfer";
+  src: url(/public/fonts/Nosfer__.ttf);
+}
+
+label {
+  font-size: 18px;
+  color: rgb(205, 205, 50);
+  margin-bottom: 10px;
+  font-family: "Nosfer", sans-serif;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: -7px 8px 6px rgba(247, 239, 3, 0.705);
+}
+
+button {
+  background-color: rgb(9, 189, 75);
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 28px;
+  color: rgb(205, 205, 50);
+  font-family: "Nosfer", cursive;
+}
