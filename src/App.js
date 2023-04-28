@@ -12,12 +12,13 @@ import Favorites from "./components/Favorites/Favorites";
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
-const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
+// const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 
-const API_KEY = "771320657530.2a926528098abf1f2bde";
+// const API_KEY = "771320657530.2a926528098abf1f2bde";
 
-const email = "servisechimino79@gmail.com";
-const password = "unaPassword3&";
+// const email = "servisechimino79@gmail.com";
+// const password = "unaPassword3&";
+const URL = 'http://localhost:3001/rickandmorty/login';
 
 function App() {
   const location = useLocation();
@@ -28,12 +29,26 @@ function App() {
 
   const [access, setAccess] = useState(false);
 
-  const login = (inputs) => {
-    if (inputs.email === email && inputs.password === password) {
-      setAccess(true);
-      navigate("/home");
-    }
-  };
+  // const login = (inputs) => {
+  //   if (inputs.email === email && inputs.password === password) {
+  //     setAccess(true);
+  //     navigate("/home");
+  //   }
+  // };
+
+    const login = async (inputs) => {
+      try {
+        const { email, password } = inputs;
+        const { data } = await axios(URL + `?email=${email}&password=${password}`)
+        const { access } = data;
+
+        setAccess(access);
+        access && navigate('/home');
+
+      } catch (error) {
+        console.log(error.message);
+      }
+  }
 
   const logout = () => {
     setAccess(false);
@@ -42,18 +57,23 @@ function App() {
 
   useEffect(() => {
     !access && navigate("/");
-  }, [access]);
+  }, [access,navigate]);
 
-  const onSearch = (id) => {
-    axios(`${URL_BASE}/${id}?key=${API_KEY}`)
-      .then((response) => response.data)
-      .then((data) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert("¡No hay personajes con este ID!");
-        }
-      });
+  // axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+  const onSearch = async (id) => {
+    try {
+      const { data } = await axios(
+        `http://localhost:3001/rickandmorty/character/${id}`
+      );
+      // .then((response) => response.data)
+      // .then((data) => {
+      if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data]);
+      }
+      // });
+    } catch (error) {
+      alert("¡No hay personajes con este ID!");
+    }
   };
 
   const onClose = (id) => {

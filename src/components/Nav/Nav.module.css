@@ -25,3 +25,15 @@
 .active {
   color: lime;
 }
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}

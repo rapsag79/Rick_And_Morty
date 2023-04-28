@@ -37,6 +37,7 @@ export default function Nav({ onSearch, logout }) {
 
       <SearchBar onSearch={onSearch} />
       <button
+        style={{marginRight:"2rem"}}
         className={styles["nav-link"]}
         activeClassName={styles.active}
         onClick={logout}

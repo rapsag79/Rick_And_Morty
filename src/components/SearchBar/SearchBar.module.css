@@ -6,12 +6,13 @@
 .searchInput {
   height: 30px;
   width: 100px;
-  padding: 0 10px;
+  padding: 1px;
   border: 2px solid lime;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
   outline: none;
   font-size: 1em;
+  box-shadow: -5px 6px 4px rgba(247, 239, 3, 0.705);
 }
 
 .searchInput:focus {

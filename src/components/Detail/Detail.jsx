@@ -3,23 +3,26 @@ import styles from "./Detail.module.css";
 import { useParams, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
+// const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 
-const API_KEY = "771320657530.2a926528098abf1f2bde";
+// const API_KEY = "771320657530.2a926528098abf1f2bde";
 
 const Detail = ({ onClose }) => {
   const { id } = useParams();
 
   const [character, setCharacter] = useState({});
 
+  // axios(`${URL_BASE}/${id}?key=${API_KEY}`)
   useEffect(() => {
-    axios(`${URL_BASE}/${id}?key=${API_KEY}`).then(({ data }) => {
-      if (data.name) {
-        setCharacter(data);
-      } else {
-        window.alert("No hay personajes con ese ID");
-      }
-    });
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
+      .then((response) => response.data)
+      .then((data) => {
+        if (data.name) {
+          setCharacter(data);
+        } else if (!data.name) {
+          window.alert("No hay personajes con ese ID");
+        }
+      });
     return setCharacter({});
   }, [id]);
 

@@ -16,20 +16,19 @@ const Form = ({ login }) => {
       [event.target.name]: event.target.value,
     });
 
-    const validateErrors = validation({
-      ...inputs,
-      [event.target.name]: event.target.value,
-    });
+    // const validateErrors = validation({
+    //   ...inputs,
+    //   [event.target.name]: event.target.value,
+    // });
 
-    setErrors(validateErrors);
-    /** opcion 2 y mas simple
+    // setErrors(validateErrors);
+    // opcion 2 y mas simple
     setErrors(
-      validate({
+      validation({
         ...inputs,
         [event.target.name]: event.target.value,
       })
     );
-     */
   }
 
   function handleSubmit(event) {
